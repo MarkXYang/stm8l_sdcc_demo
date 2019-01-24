@@ -10,7 +10,7 @@ LIBS=	-lstm8
 IDIR=	-I./libs
 ODIR=	./bin
 TARGET=	ledblink
-IHX=	$(ODIR)/$(TARGET).ihx
+IHX=	$(TARGET).ihx
 
 OBJECTS := delay.rel ledblink.rel
 
@@ -30,6 +30,6 @@ $(IHX):	$(MAINSRC) $(RELS)
 clean:
 	rm *.ihx *.sym *.asm *.rel *.map *.cdb *.rst
 
-flash: $(OBJECTS)
-	stm8flash -cstlinkv2 -pstm8al3188 -w $(OBJECTS)
+flash: $(IHX)
+	stm8flash -cstlinkv2 -pstm8al3188 -w $(IHX)
 
