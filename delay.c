@@ -1,4 +1,4 @@
-#include <stm8al3168.h>
+#include "stm8al3188.h"
 #include <stdint.h>
 
 #define TIM4_SR1_UIF	((uint8_t)0x01) /* Update Interrupt Flag Mask */
@@ -6,7 +6,7 @@
 #define TIM4_CR1_CEN	((uint8_t)0x01) /* Counter Enable Mask. */
 #define TIM4_CR1_UDIS	((uint8_t)0x02) /* Update Disable Mask. */
 
-void delay_ms(uint16_t ms)
+void delay_ms(int ms)
 {
     /* Init Timer 4 */
     //CLK_PeripheralClockConfig(CLK_Peripheral_TIM4, ENABLE);

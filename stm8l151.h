@@ -145,6 +145,38 @@
 #define TIM1_DCR2 *(unsigned char*)0x52D2
 #define TIM1_DMA1R *(unsigned char*)0x52D3
 
+/* 8-Bit  Timer 4 (TIM4) */
+/*****************************************************************/
+/* TIM4 Control Register 1 */
+#define TIM4_CR1 *(unsigned char*)0x52e0
+
+/* TIM4 Control Register 2 */
+#define TIM4_CR2 *(unsigned char*)0x52e1
+
+/* TIM4 Slave Mode Control Register */
+#define TIM4_SMCR *(unsigned char*)0x52e2
+
+/* TIM4 DMA request Enable Register */
+#define TIM4_DER *(unsigned char*)0x52e3
+
+/* TIM4 Interrupt Enable Register */
+#define TIM4_IER *(unsigned char*)0x52e4
+
+/* TIM4 Status Register 1 */
+#define TIM4_SR1 *(unsigned char*)0x52e5
+
+/* TIM4 Event Generation Register */
+#define TIM4_EGR *(unsigned char*)0x52e6
+
+/* TIM4 Counter */
+#define TIM4_CNTR *(unsigned char*)0x52e7
+
+/* TIM4 Prescaler Register */
+#define TIM4_PSCR *(unsigned char*)0x52e8
+
+/* TIM4 Auto-Reload Register */
+#define TIM4_ARR *(unsigned char*)0x52e9
+
 /* TIM_IER bits */
 #define TIM_IER_BIE (1 << 7)
 #define TIM_IER_TIE (1 << 6)

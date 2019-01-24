@@ -1,13 +1,15 @@
 #include "stm8al3188.h"
+#include "delay.h"
 
 int main()
 {
-    int i;
-    PE_DDR = 0x80;
-    PE_CR1 = 0x80;
+//    int i;
+    PC_DDR = 0x80;
+    PC_CR1 = 0x80;
 
     while(1) {
-        PE_ODR ^= 0x80;
-        for(i=0; i<30000; i++) {}
+        PC_ODR ^= 0x80;
+	delay_ms(500);
+//        for(i=0; i<30000; i++) {}
     }
 }
