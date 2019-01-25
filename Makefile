@@ -2,17 +2,17 @@ MCU=	stm8
 DEVICE=	stm8al3188
 FLASHER=stlinkv2
 CC=	sdcc
-MAINSRC=ledblink.c
+MAINSRC=sleep_demo.c
 EXTRASRC=delay.c
 RELS=$(EXTRASRC:.c=.rel)
 CFLAGS=	-mstm8
 LIBS=	-lstm8
 IDIR=	-I./libs
 ODIR=	./bin
-TARGET=	ledblink
+TARGET=	sleep_demo
 IHX=	$(TARGET).ihx
 
-OBJECTS := delay.rel ledblink.rel
+OBJECTS := delay.rel sleep_demo.rel
 
 .PHONY: all clean
 
@@ -28,7 +28,7 @@ $(IHX):	$(MAINSRC) $(RELS)
 
 
 clean:
-	rm *.ihx *.sym *.asm *.rel *.map *.cdb *.rst
+	rm *.ihx *.sym *.asm *.rel *.map *.cdb *.rst *.lst *.lk
 
 flash: $(IHX)
 	stm8flash -cstlinkv2 -pstm8al3188 -w $(IHX)
