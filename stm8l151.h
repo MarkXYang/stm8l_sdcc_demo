@@ -206,3 +206,13 @@
 #define TIM_SR1_CC2IF (1 << 2)
 #define TIM_SR1_CC1IF (1 << 1)
 #define TIM_SR1_UIF (1 << 0)
+
+/* External Interrupt Control Register(ITC) */
+#define EXTI_CR1     *(unsigned char*)0x50a0
+#define EXTI_CR2     *(unsigned char*)0x50a1
+#define EXTI_CR3     *(unsigned char*)0x50a2
+#define EXTI_SR1     *(unsigned char*)0x50a3
+#define EXTI_SR2     *(unsigned char*)0x50a4
+#define EXTI_CONF   *(unsigned char*)0x50a5
+#define WFE_CR1     *(unsigned char*)0x50a6
+#define WFE_CR2     *(unsigned char*)0x50a7
